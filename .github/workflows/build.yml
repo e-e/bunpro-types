@@ -19,6 +19,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Authenticate to private GitHub npm registry
+        run: >
+          cat > .npmrc <<EOF
+
+          //npm.pkg.github.com/:_authToken=${{ secrets.PRIVATE_NPM_REGISTRY_TOKEN }}
+
+          @e-e:registry=https://npm.pkg.github.com/
+
+          EOF
       - name: Install dependencies
         run: yarn install --check-files
       - name: build
