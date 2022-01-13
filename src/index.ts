@@ -1,67 +1,67 @@
-type JapaneseTargetSentence = {
+export type JapaneseTargetSentence = {
   id: number;
   text: string;
   html: string;
   target: string;
 };
 
-type JapaneseExampleSentence = {
+export type JapaneseExampleSentence = {
   id: number;
   text: string;
   target: string;
   html: string;
 };
 
-type EnglishExampleSentence = {
+export type EnglishExampleSentence = {
   id: number;
   text: string;
   target: string;
   html: string;
 };
 
-type ExampleSentence = {
+export type ExampleSentence = {
   japanese: JapaneseExampleSentence;
   english: EnglishExampleSentence;
 };
 
-type JLPTLevel = 'N1' | 'N2' | 'N3' | 'N4' | 'N5';
+export type JLPTLevel = 'N1' | 'N2' | 'N3' | 'N4' | 'N5';
 
-type GrammarNumber = {
+export type GrammarNumber = {
   number: number;
   total: number;
 };
 
-type GrammarInfo = {
+export type GrammarInfo = {
   id: number;
   level: JLPTLevel;
   lesson: string;
   grammar: GrammarNumber;
 };
 
-type EnglishTargetSentence = string;
-type StudyTarget = string;
+export type EnglishTargetSentence = string;
+export type StudyTarget = string;
 
-type RelatedGrammars = {
+export type RelatedGrammars = {
   synonyms: RelatedGrammar[];
   antonyms: RelatedGrammar[];
 };
 
-type RelatedGrammar = {
+export type RelatedGrammar = {
   grammar: string;
   url: string;
 };
 
-type TargetSentence = {
+export type TargetSentence = {
   japanese: JapaneseTargetSentence;
   english: EnglishTargetSentence;
   target: StudyTarget;
 };
 
-type ReviewData = {
+export type ReviewData = {
   grammar: GrammarInfo;
   sentence: TargetSentence;
   examples: ExampleSentence[];
   related: RelatedGrammars;
 };
 
-type RelatedGrammarType = 'antonyms' | 'synonyms';
+export type RelatedGrammarType = 'antonyms' | 'synonyms';
