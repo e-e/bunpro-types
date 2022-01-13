@@ -31,11 +31,13 @@ export type GrammarNumber = {
   total: number;
 };
 
-export type GrammarInfo = {
+export type GrammarPoint = {
   id: number;
   level: JLPTLevel;
   lesson: string;
   grammar: GrammarNumber;
+  point: string;
+  meaning: string;
 };
 
 export type EnglishTargetSentence = string;
@@ -58,7 +60,7 @@ export type TargetSentence = {
 };
 
 export type ReviewData = {
-  grammar: GrammarInfo;
+  grammar: GrammarPoint;
   sentence: TargetSentence;
   examples: ExampleSentence[];
   related: RelatedGrammars;
