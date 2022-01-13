@@ -39,6 +39,7 @@ export type GrammarPoint = {
   kanji: string;
   reading: string;
   meaning: string;
+  meaningExtra: string;
 };
 
 export type EnglishTargetSentence = string;
