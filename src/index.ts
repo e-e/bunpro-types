@@ -35,7 +35,7 @@ export type GrammarPoint = {
   id: number;
   level: JLPTLevel;
   lesson: string;
-  grammar: GrammarNumber;
+  number: number;
   kanji: string;
   reading: string;
   meaning: string;
