@@ -1,14 +1,14 @@
 const { cdk } = require('projen');
 const project = new cdk.JsiiProject({
-  author: "Eric Ellingson",
-  authorAddress: "god@eric.wtf",
-  defaultReleaseBranch: "main",
-  name: "@e-e/bunpro-types",
-  repositoryUrl: "https://github.com/e-e/bunpro-types.git",
-  npmRegistryUrl: "https://npm.pkg.github.com",
+  author: 'Eric Ellingson',
+  authorAddress: 'god@eric.wtf',
+  defaultReleaseBranch: 'main',
+  name: '@e-e/bunpro-types',
+  repositoryUrl: 'https://github.com/e-e/bunpro-types.git',
+  npmRegistryUrl: 'https://npm.pkg.github.com',
   workflowBootstrapSteps: [
     {
-      name: "Authenticate to private GitHub npm registry",
+      name: 'Authenticate to private GitHub npm registry',
       run: `cat > .npmrc <<EOF
 //npm.pkg.github.com/:_authToken=\${{ secrets.PRIVATE_NPM_REGISTRY_TOKEN }}
 @e-e:registry=https://npm.pkg.github.com/
@@ -24,7 +24,7 @@ EOF
 });
 
 project.addGitIgnore('.npmrc');
-project.addGitIgnore(".env");
+project.addGitIgnore('.env');
 
 
 project.synth();
