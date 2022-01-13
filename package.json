@@ -1,8 +1,8 @@
 {
-  "name": "bunpro-types",
+  "name": "@e-e/bunpro-types",
   "repository": {
     "type": "git",
-    "url": "https://github.com/god/bunpro-types.git"
+    "url": "https://github.com/e-e/bunpro-types.git"
   },
   "scripts": {
     "build": "npx projen build",

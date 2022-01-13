@@ -51,4 +51,5 @@ junit.xml
 tsconfig.json
 !/API.md
 .npmrc
+.env
 !/.github/workflows/upgrade-main.yml
